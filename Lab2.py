@@ -16,7 +16,6 @@ def get_user_input():
     print(values_list)
     return values_list
 
-
 def find_min_max(values_list):
     print("find min and max")
     max_value = max (values_list)
@@ -32,11 +31,25 @@ def sort_temperature(values_list):
     print(value_sorted)
     return value_sorted
 
+
+
+def calc_median_temperature(value_sorted):
+    print("calculate median temp")
+    median_value = statistics.median(value_sorted)
+    print(median_value)
+    return median_value
+
+
+
 def main():
     y=get_user_input() 
     find_min_max(y)
     calc_average(y)
     s=sort_temperature(y)
+    calc_median_temperature(s)
+
+ 
+
 
 if __name__ == "__main__":
     main()
